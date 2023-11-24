@@ -1,9 +1,18 @@
 import React from 'react';
 import MainNav from '../components/MainNav/MainNav';
 import RangeSelectors from '../components/dateRange/RangeSelector';
-import DaysOfWeek from '../components/DaysOfWeek/DaysOfWeek';
+import CheckBoxCard from '../components/CheckBoxCard/CheckBoxCard';
 import './OpenTableHome.css';
 
+
+
+const DAYSOFWEEK:string[] = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday'
+]
 
 const OpenTableHome = () => {
     return(
@@ -15,7 +24,7 @@ const OpenTableHome = () => {
                 <div className='open-table-sections-surgeon'>Surgeon Info</div>
                 <div className='open-table-sections-calendar'>
                     <RangeSelectors title='Select Date Range' />
-                    <DaysOfWeek title='Select Day Of Week' />
+                    <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
                 </div>
                 <div className='open-table-sections-procedure'>Procedure Info</div>
             </div>
