@@ -26,18 +26,17 @@
         "surgeon calendar procedure";
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
-        background-color:aqua;
 
-        .open-table-secitions-surgeon {
+
+        .open-table-sections-surgeon {
             background-color: blue;
             grid-area:surgeon;
         }
 
-        .open-table-secitions-calendar {
-            background-color: blue;
+        .open-table-sections-calendar {
             grid-area:calendar
         }
-        .open-table-secitions-procedure {
+        .open-table-sections-procedure {
             background-color: blue;
             grid-area:procedure;
         }
