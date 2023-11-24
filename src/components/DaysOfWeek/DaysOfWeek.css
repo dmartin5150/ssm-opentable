@@ -1,0 +1,39 @@
+.daysofweek {
+    display:flex;
+    border: 1px solid black;
+    min-width: 35rem;
+    position:relative;
+    border-radius:2px;
+    padding:0.5rem 0;
+    /* margin:0.5rem 0; */
+
+
+
+    .daysofweek-title {
+        position:absolute;
+        top: -0.8rem;
+        left: 2rem;
+        padding:0;
+        margin:0;
+        background-color: white;
+        font-size: medium;
+
+
+    }
+    .daysofweek-container {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width:100%;
+        .daysofweek-day {
+            margin-right:0.2rem;
+            .daysofweek-day-label {
+                padding:0;
+                margin:0.5rem 0;
+                font-size:medium;
+            }
+        }
+    }
+
+}

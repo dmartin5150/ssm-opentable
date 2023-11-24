@@ -26,6 +26,7 @@
         "surgeon calendar procedure";
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
+        min-height:11rem;
 
 
         .open-table-sections-surgeon {
@@ -34,7 +35,11 @@
         }
 
         .open-table-sections-calendar {
-            grid-area:calendar
+            grid-area:calendar;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
         }
         .open-table-sections-procedure {
             background-color: blue;
