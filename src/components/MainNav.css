@@ -1,0 +1,36 @@
+.main-nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:100vw;
+    height: 5rem;
+    /* background: linear-gradient(216.98deg, rgb(30, 105, 210) 0%, rgb(27, 66, 151) 100%); */
+
+    .main-nav-logo {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding:10px;
+        .main-nav-logo-container {
+            height:200px;
+            width:250px;
+            .main-nav-logo-image{
+                height:100%;
+                width:100%;
+            }
+
+        }
+        .main-nav-logo-ascension {
+            .main-nav-logo-ascension-outline{
+                border-left: 2px solid black;
+                height:80%;
+                .main-nav-logo-ascension-name {
+                    padding:3px;
+                }
+            }
+
+        }
+    }
+}

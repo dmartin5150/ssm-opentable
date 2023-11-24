@@ -1,0 +1,66 @@
+.open-table {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "selections"
+    "mainbody"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 6fr;
+    grid-gap: 10px;
+    height:100vh;
+    width:100vw;
+    margin:0;
+    padding:0;
+
+
+
+    .open-table-main-nav {
+        grid-area: header;
+    }
+
+    .open-table-selections {
+        grid-area:selections;
+        display:grid;
+        grid-template-areas: 
+        "surgeon calendar procedure";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        background-color:aqua;
+
+        .open-table-secitions-surgeon {
+            background-color: blue;
+            grid-area:surgeon;
+        }
+
+        .open-table-secitions-calendar {
+            background-color: blue;
+            grid-area:calendar
+        }
+        .open-table-secitions-procedure {
+            background-color: blue;
+            grid-area:procedure;
+        }
+    }
+    .open-table-main-body {
+        grid-area:mainbody;
+        display:grid;
+        grid-template-areas: 
+        "times form";
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 10px;
+
+        .open-table-times {
+            grid-area: times;
+            background-color: purple
+        }
+        .open-table-form {
+            grid-area: form;
+            background-color: purple
+        }
+    }
+    
+
+
+}
+
