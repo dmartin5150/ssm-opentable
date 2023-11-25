@@ -14,6 +14,11 @@ const MainNav = () => {
                     </div>
                 </div>
             </div>
+            <div className='main-nav-featurename-container'>
+                <div className='main-nav-featurename'>
+                    <h1>Find A Room</h1>
+                </div>
+            </div>
         </div>
     )
 }

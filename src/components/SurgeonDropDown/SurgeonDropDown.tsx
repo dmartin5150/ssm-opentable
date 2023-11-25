@@ -13,7 +13,7 @@ const SurgeonDropDown: React.FC<SurgeonDropDownProps> = ({surgeons}) => {
     return (
         <Card>
             <div className='surgeon-dropdown'>
-                <h2 className='surgeon-dropdown-label'>Select Surgeon</h2>
+                <h2 className='surgeon-dropdown-label'>Surgeon</h2>
                 <div className='surgeon-dropdown-dropdownbox' >
                     <DropdownBox options={surgeons} />
                 </div>

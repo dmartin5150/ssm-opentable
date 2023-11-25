@@ -1,9 +1,9 @@
 .main-nav {
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    width:100vw;
+    width:90vw;
     height: 5rem;
     /* background: linear-gradient(216.98deg, rgb(30, 105, 210) 0%, rgb(27, 66, 151) 100%); */
 
@@ -31,5 +31,11 @@
                 }
             }
         }
+    }
+    .main-nav-featurename-container {
+        display:flex;
+        justify-content: center;
+        color:#1551B4;
+
     }
 }

@@ -11,15 +11,16 @@
             grid-template-areas: 
             "surgeon procedure dates facilities"
             "findroom templates daysofweek  units";
-            grid-template-columns: 0.2fr 0.3fr 0.6fr 0.8fr;
+            grid-template-columns: auto;
             grid-gap: 10px;
             min-height:12rem;
-
+            width:90%;
 
             .open-table-sections-surgeon {
                 grid-area:surgeon;
                 max-width:12rem;
                 max-height:5.5rem;
+
             }
             .open-table-sections-findroom {
                 display:flex;
@@ -57,23 +58,25 @@
         }
     }
     .open-table-main-body-container {
-        display:flex;
-        justify-content: center;
+        /* display:flex;
+        justify-content: center; */
+
 
         .open-table-main-body {
             display:flex;
             justify-content: flex-start;
-            width:100%;
-            margin-left:8rem;
+            /* width:100%; */
+            /* margin-left:8rem; */
             margin-top:0.5rem;
 
             .open-table-times {
                 height:100%;
+                margin-left:5%;
             }
 
             .open-table-form {
-                width:76%;
                 margin-left:5px;
+                width:73%;
             }
         }
     }
