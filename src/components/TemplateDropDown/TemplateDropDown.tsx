@@ -13,7 +13,7 @@ const TemplateDropDown: React.FC<TemplateDropDownProps> = ({templates}) => {
     return (
         <Card>
             <div className='template-dropdown'>
-                <h2 className='template-dropdown-label'>Select template</h2>
+                <h2 className='template-dropdown-label'>Select SSM template</h2>
                 <div className='template-dropdown-dropdownbox' >
                     <DropdownBox options={templates} />
                 </div>

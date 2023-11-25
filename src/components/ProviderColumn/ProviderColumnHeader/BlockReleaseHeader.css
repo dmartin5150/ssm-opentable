@@ -1,0 +1,56 @@
+.block-release-header {
+    background-color: #424242;
+
+    color:white;
+    min-width:280px;
+    height:70px;
+    text-align: left;
+    font-size:small;
+    font-family: Lato;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    .block-release-header-data {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px 8px 0px 8px;
+        .block-release-header-name {
+            margin:0;
+            padding:0
+        }
+        .block-release-header-time {
+            margin:0;
+            padding:2px 0;
+            font-weight:lighter;
+        }
+        .block-release-header-available {
+            margin:0;
+            padding:0
+        }
+        .block-release-header-released {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #757575;
+
+            .block-release-header-image-container {
+                height:20px;
+                width:20px;
+                .block-release-header-image {
+                    height:100%;
+                    width:100%;
+                }
+            }
+            .block-release-message {
+                margin-left:10px;
+            }
+
+        }
+    }
+
+}

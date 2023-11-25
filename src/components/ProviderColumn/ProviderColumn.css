@@ -1,0 +1,7 @@
+.provider-column {
+    height:95vh;
+    min-width:25%;
+    border: 5px solid black;
+    border-radius: 5px;
+    overflow-y:scroll;
+}

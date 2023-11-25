@@ -1,0 +1,36 @@
+.provider-column-header {
+    background-color: #0f3c97;
+
+    color:white;
+    min-width:280px;
+    height:70px;
+    text-align: left;
+    font-size:small;
+    font-family: Lato;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    .provider-column-header-data {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px 8px 0px 8px;
+        .provider-column-header-name {
+            margin:0;
+            padding:0
+        }
+        .provider-column-header-time {
+            margin:0;
+            padding:2px 0;
+            font-weight:lighter;
+        }
+        .provider-column-header-available {
+            margin:0;
+            padding:0
+        }
+    }
+
+}

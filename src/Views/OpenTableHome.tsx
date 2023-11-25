@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MainNav from '../components/MainNav/MainNav';
 import RangeSelectors from '../components/dateRange/RangeSelector';
 import CheckBoxCard from '../components/CheckBoxCard/CheckBoxCard';
@@ -7,7 +7,11 @@ import ProcedureDropDown from '../components/ProcedureDropDown/ProcedureDropDown
 import TemplateDropDown from '../components/TemplateDropDown/TemplateDropDown';
 import FindRoom from '../components/FindRoom/FindRoom';
 import './OpenTableHome.css';
+import ProviderColumn from '../components/ProviderColumn/ProviderColumn';
+import { PROVIDERS } from '../data/sampledata/Providers';
 
+import { BLOCKS } from '../data/sampledata/Blocks';
+import { PROCEDURES } from '../data/sampledata/Procedures';
 
 
 const DAYSOFWEEK:string[] = [
@@ -39,7 +43,7 @@ const UNITS:string[] = [
 ];
 
 
-const PROCEDURES:string[] = [
+const PROCEDURESNAMES:string[] = [
     'Total Knee Replacement',
     'Total Hip Replacement',
     'Other Procedures'
@@ -51,7 +55,16 @@ const TEMPLATES:string[] = [
     'Other Procedures'
 ]
  
-const OpenTableHome = () => {
+const OpenTableHome: React.FC = () => {
+
+    const [selectedTimeID, setSelectedTimeID] = useState(-1);
+
+    const handleChangeSelectedTime = (selectedTime:number) => {
+        setSelectedTimeID(selectedTime);
+    }
+
+
+    const provider1 = PROCEDURES.filter((procedure)=> procedure.providerId === 1);
     return(
         <div className='open-table'>
             <div className='open-table-main-nav'>
@@ -77,14 +90,16 @@ const OpenTableHome = () => {
                     <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
                 </div>
                 <div className='open-table-sections-procedure'>
-                    <ProcedureDropDown procedures={PROCEDURES} />
+                    <ProcedureDropDown procedures={PROCEDURESNAMES} />
                 </div>
                 <div className='open-table-sections-templates'>
                     <TemplateDropDown templates={TEMPLATES} />
                 </div>
             </div>
             <div className='open-table-main-body'>
-                <div className='open-table-times'>Times</div>
+                <div className='open-table-times'>
+                <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+                </div>
                 <div className='open-table-form'>Scheduling Form</div>
             </div>
         </div>

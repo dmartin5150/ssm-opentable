@@ -1,0 +1,18 @@
+.procedure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.procedure-container.show-outline {
+    background-color: #E8F5FE;
+}
+.procedure-container.show-released {
+    background-color: #EEEEEE;
+}
+
+.block {
+    border: 5px solid #1551B4;
+    background-color: #E8F5FE;
+}

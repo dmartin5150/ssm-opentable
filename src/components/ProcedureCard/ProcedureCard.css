@@ -1,0 +1,128 @@
+.procedure-card {
+    text-align: left;
+
+    margin: 1rem auto;
+    width:90%;
+    font-size:small;
+    font-family: Lato;
+    font-weight:300;
+    color:black;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .procedure-card-checkbox-container {
+        padding:8px 4px;
+    }
+    .procedure-card-data {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px 8px 0px 8px;
+        padding:8px;
+        width:100%;
+
+        .procedure-card-inBlock {
+            margin:0;
+            padding:0;
+            color: #1551B4;
+        }
+
+
+            .procedure-card-data-heading {
+                display:flex;
+                flex-direction:row;
+                justify-content: space-between;
+                .procedure-card-data-firstline {
+                    display:flex;
+                    flex-direction:column;
+                }
+                .procedure-card-data-heading-rightside {
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    min-width:50px;
+
+                    .procedure-card-data-container {
+                        height:20px;
+                        width:20px;
+                        .procedure-card-data-image {
+                            height:100%;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+
+
+
+        .procedure-card-provider {
+            margin:0;
+            padding:0;
+        }
+
+        .procedure-card-dateString {
+            margin:0;
+            padding:0;
+        }
+
+        .procedure-card-timeString {
+            margin:0;
+            padding:0;
+        }
+        .procedure-card-patientName {
+            margin:0;
+            padding:0;
+        }
+        .procedure-card-procedureName {
+            margin:0;
+            padding:0;
+            text-decoration: underline;
+        }
+        .procedure-card-room {
+            margin:0;
+            padding:0;
+        }
+        .procedure-card-FIN-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .procedure-card-FIN {
+                margin:0;
+                padding:0;
+            }
+            .procedure-card-copy-container {
+                height: 20px;
+                width:20px;
+                .procedure-card-copy-image {
+                    height:100%;
+                    width:100%;
+                }
+            }
+        }
+
+    }
+}
+
+.procedure-card.scheduled{
+    background-color: #E9FBE7;
+    border:2px solid #2c3a34
+}
+.procedure-card.unscheduled{
+    background-color: rgb(255, 247, 230);
+    border: 2px dashed rgb(255, 127, 0);
+}
+.procedure-card.revision{
+    background-color: #FDE6EE;
+    border: 2px solid #B40F87; 
+}
+
+procedure-card.open {
+    border: 2px solid #B40F87; 
+    background-color: #fcffb3
+}
+.procedure-card.other{
+    background-color: #e1e8e0cd;
+    border:2px solid rgb(71, 66, 66);
+}
