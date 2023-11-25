@@ -3,7 +3,7 @@
     /* padding:1rem; */
     border: 1px solid black;
     min-width: 25rem;
-    max-width: 35rem;
+    max-width: 38rem;
     position:relative;
     border-radius:2px;
     min-height:2.5rem;
@@ -21,7 +21,7 @@
 
     .range-selector {
         padding-top:0,5rem;
-        width: 100%;
+        width: 17rem;
         margin:0.5rem 0;
 
         .range-selector-label {

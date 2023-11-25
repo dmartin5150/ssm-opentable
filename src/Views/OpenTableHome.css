@@ -1,6 +1,5 @@
 .open-table {
-    /* display:flex; */
-    /* justify-content: center; */
+
  
     .open-table-selections-container {
         display:flex;
@@ -25,16 +24,30 @@
             .open-table-sections-findroom {
                 display:flex;
                 align-items: center;
-                justify-content:center;
+                
             }
 
             .open-table-sections-dates {
                 grid-area:dates;
-                max-width:37rem;
+                max-width:40rem;
+                .open-table-sections-range-container {
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:100%;
+                    width:100%;
+                }
             }
             .open-table-sections-daysofweek {
                 grid-area:daysofweek;
-                max-width: 37rem;
+                /* max-width: 37rem; */
+                .open-table-sections-daysofweek-container{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:100%;
+                    width:100%;
+                }
             }
 
             .open-table-sections-facilities {
@@ -58,15 +71,12 @@
         }
     }
     .open-table-main-body-container {
-        /* display:flex;
-        justify-content: center; */
+
 
 
         .open-table-main-body {
             display:flex;
             justify-content: flex-start;
-            /* width:100%; */
-            /* margin-left:8rem; */
             margin-top:0.5rem;
 
             .open-table-times {

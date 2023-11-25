@@ -86,10 +86,14 @@ const OpenTableHome: React.FC = () => {
                         <CheckBoxCard title='Select Units' items={UNITS} />
                     </div>
                     <div className='open-table-sections-dates'>
-                        <RangeSelectors title='Select Date Range' />
+                        <div className='open-table-sections-range-container'>
+                            <RangeSelectors title='Select Date Range' />
+                        </div>
                     </div>
                     <div className='open-table-sections-daysofweek'>
-                        <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
+                        <div className='open-table-sections-daysofweek-container'>
+                            <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
+                        </div>
                     </div>
                     <div className='open-table-sections-procedure'>
                         <ProcedureDropDown procedures={PROCEDURESNAMES} />

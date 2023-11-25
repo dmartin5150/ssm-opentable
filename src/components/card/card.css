@@ -1,8 +1,11 @@
 .card {
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.8rem 0;
     box-shadow: 2px 2px 5px grey;
-    height:60%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
 }

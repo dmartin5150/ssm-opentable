@@ -9,8 +9,8 @@ interface CardProps {
 const Card: React.FC<CardProps>= ({children}) => {
     return (
         <div className ='card'>
-            <div className='card-title-container'>
-            </div>           
+            {/* <div className='card-title-container'>
+            </div>            */}
             {children}
         </div>
     )
