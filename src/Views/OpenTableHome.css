@@ -1,87 +1,80 @@
 .open-table {
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "selections"
-    "mainbody"
-    ;
-    grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr 10fr;
-    grid-gap: 5px;
-    margin:0;
+    /* display:flex; */
+    /* justify-content: center; */
  
+    .open-table-selections-container {
+        display:flex;
+        justify-content: center;
+        .open-table-selections {
+            grid-area:selections;
+            display:grid;
+            grid-template-areas: 
+            "surgeon procedure dates facilities"
+            "findroom templates daysofweek  units";
+            grid-template-columns: 0.2fr 0.3fr 0.6fr 0.8fr;
+            grid-gap: 10px;
+            min-height:12rem;
 
 
+            .open-table-sections-surgeon {
+                grid-area:surgeon;
+                max-width:12rem;
+                max-height:5.5rem;
+            }
+            .open-table-sections-findroom {
+                display:flex;
+                align-items: center;
+                justify-content:center;
+            }
 
-    .open-table-main-nav {
-        grid-area: header;
-    }
+            .open-table-sections-dates {
+                grid-area:dates;
+                max-width:37rem;
+            }
+            .open-table-sections-daysofweek {
+                grid-area:daysofweek;
+                max-width: 37rem;
+            }
 
-    .open-table-selections {
-        grid-area:selections;
-        display:grid;
-        grid-template-areas: 
-        "surgeon procedure dates facilities"
-        "findroom templates daysofweek  units";
-        grid-template-columns: 0.2fr 0.3fr 0.6fr 0.8fr;
-        grid-gap: 10px;
-        min-height:12rem;
+            .open-table-sections-facilities {
+                grid-area:facilities;
+                max-width:37rem;
+            }
 
+            .open-table-sections-units {
+                grid-area:units;
+                max-width:37rem;
+            }
 
-        .open-table-sections-surgeon {
-            grid-area:surgeon;
-            max-width:12rem;
-            max-height:5.5rem;
-        }
-        .open-table-sections-findroom {
-            grid-area:findroom;
-            max-width:12rem;
-            max-height:5.5rem;
-        }
-
-        .open-table-sections-dates {
-            grid-area:dates;
-            max-width:37rem;
-        }
-        .open-table-sections-daysofweek {
-            grid-area:daysofweek;
-            max-width: 37rem;
-        }
-
-        .open-table-sections-facilities {
-            grid-area:facilities;
-            max-width:37rem;
-        }
-
-        .open-table-sections-units {
-            grid-area:units;
-            max-width:37rem;
-        }
-
-        .open-table-sections-procedure {
-            grid-area:procedure;
-            max-width:20rem;
-        }
-        .open-table-sections-templates {
-            grid-area:templates;
-            max-width:20rem;
+            .open-table-sections-procedure {
+                grid-area:procedure;
+                max-width:20rem;
+            }
+            .open-table-sections-templates {
+                grid-area:templates;
+                max-width:20rem;
+            }
         }
     }
-    .open-table-main-body {
-        grid-area:mainbody;
-        display:grid;
-        grid-template-areas: 
-        "times form";
-        grid-template-columns: 1fr 4fr;
-        grid-gap: 10px;
+    .open-table-main-body-container {
+        display:flex;
+        justify-content: center;
 
-        .open-table-times {
-            grid-area: times;
-            min-width:25%;
-        }
-        .open-table-form {
-            grid-area: form;
-            background-color: purple
+        .open-table-main-body {
+            display:flex;
+            justify-content: flex-start;
+            width:100%;
+            margin-left:8rem;
+            margin-top:0.5rem;
+
+            .open-table-times {
+                height:100%;
+            }
+
+            .open-table-form {
+                width:76%;
+                margin-left:5px;
+            }
         }
     }
     

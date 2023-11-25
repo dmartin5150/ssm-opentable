@@ -1,24 +1,36 @@
 .find-room {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position:relative;
-    border: 1px solid black;
 
 
-    .find-room-title {
-        font-size:medium;
-        position:absolute;
-        top: -0.8rem;
-        left: 2rem;
-        padding:0;
-        margin:0;
-        background-color: white;
+    .find-room-button-container {
+        height:50px;
+        width:150px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .find-room-button {
+            margin:10px;
+            background-color: white;
+            height:100%;
+            width:100%;
+            padding:0;
+            margin:0;
+            border: 2px solid #1551B4;
+            color:#1551B4;
+            font-weight: bold;
+            font-size:18px;
+
+        }
+
+        .find-room-button:hover,
+        .find-room-button:active {
+            background-color: #E8F5FE;
+            border: 2px solid #1551B4;
+            /* color: black; */
+
+        }
+
     }
 
 
-    .find-room-button {
-        margin:10px;
-    }
 
 }

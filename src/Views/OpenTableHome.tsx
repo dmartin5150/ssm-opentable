@@ -12,6 +12,7 @@ import { PROVIDERS } from '../data/sampledata/Providers';
 
 import { BLOCKS } from '../data/sampledata/Blocks';
 import { PROCEDURES } from '../data/sampledata/Procedures';
+import EmptySchedulingForm from '../components/EmptySchedulingForm/EmptySchedulingForm';
 
 
 const DAYSOFWEEK:string[] = [
@@ -70,37 +71,43 @@ const OpenTableHome: React.FC = () => {
             <div className='open-table-main-nav'>
                 <MainNav />
             </div>
-            <div className='open-table-selections'>
-                <div className='open-table-sections-surgeon'>
-                    <SurgeonDropDown surgeons={SURGEONS} />
-                </div>
-                <div className='open-table-sections-findroom'>
-                    <FindRoom  />
-                </div>
-                <div className='open-table-sections-facilities'>
-                    <CheckBoxCard title='Select Facilities' items={FACILITIES} />
-                </div>
-                <div className='open-table-sections-units'>
-                    <CheckBoxCard title='Select Units' items={UNITS} />
-                </div>
-                <div className='open-table-sections-dates'>
-                    <RangeSelectors title='Select Date Range' />
-                </div>
-                <div className='open-table-sections-daysofweek'>
-                    <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
-                </div>
-                <div className='open-table-sections-procedure'>
-                    <ProcedureDropDown procedures={PROCEDURESNAMES} />
-                </div>
-                <div className='open-table-sections-templates'>
-                    <TemplateDropDown templates={TEMPLATES} />
+            <div className='open-table-selections-container'>
+                <div className='open-table-selections'>
+                    <div className='open-table-sections-surgeon'>
+                        <SurgeonDropDown surgeons={SURGEONS} />
+                    </div>
+                    <div className='open-table-sections-findroom'>
+                        <FindRoom  />
+                    </div>
+                    <div className='open-table-sections-facilities'>
+                        <CheckBoxCard title='Select Facilities' items={FACILITIES} />
+                    </div>
+                    <div className='open-table-sections-units'>
+                        <CheckBoxCard title='Select Units' items={UNITS} />
+                    </div>
+                    <div className='open-table-sections-dates'>
+                        <RangeSelectors title='Select Date Range' />
+                    </div>
+                    <div className='open-table-sections-daysofweek'>
+                        <CheckBoxCard title='Select Day Of Week' items={DAYSOFWEEK} />
+                    </div>
+                    <div className='open-table-sections-procedure'>
+                        <ProcedureDropDown procedures={PROCEDURESNAMES} />
+                    </div>
+                    <div className='open-table-sections-templates'>
+                        <TemplateDropDown templates={TEMPLATES} />
+                    </div>
                 </div>
             </div>
-            <div className='open-table-main-body'>
-                <div className='open-table-times'>
-                <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+            <div className='open-table-main-body-container'>
+                <div className='open-table-main-body'>
+                    <div className='open-table-times'>
+                    <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+                    </div>
+                    <div className='open-table-form'>
+                        <EmptySchedulingForm procedureId={selectedTimeID}/>
+                    </div>
                 </div>
-                <div className='open-table-form'>Scheduling Form</div>
             </div>
         </div>
     )
