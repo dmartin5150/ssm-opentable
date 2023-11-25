@@ -1,0 +1,24 @@
+.find-room {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:relative;
+    border: 1px solid black;
+
+
+    .find-room-title {
+        font-size:medium;
+        position:absolute;
+        top: -0.8rem;
+        left: 2rem;
+        padding:0;
+        margin:0;
+        background-color: white;
+    }
+
+
+    .find-room-button {
+        margin:10px;
+    }
+
+}

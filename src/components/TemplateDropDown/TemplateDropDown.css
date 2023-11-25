@@ -1,0 +1,21 @@
+
+.template-dropdown {
+    display:flex;
+    border: 1px solid black;
+    position:relative;
+    border-radius:2px;
+    justify-content: center;
+    align-items: center;
+    max-width:20rem;
+    min-height:2.5rem;
+    
+    .template-dropdown-label {
+        font-size:medium;
+        position:absolute;
+        top: -0.8rem;
+        left: 2rem;
+        padding:0;
+        margin:0;
+        background-color: white;
+    }
+}

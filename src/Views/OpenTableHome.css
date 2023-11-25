@@ -6,12 +6,10 @@
     "mainbody"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.5fr 6fr;
-    grid-gap: 10px;
-    height:100vh;
-    width:100vw;
+    grid-template-rows: .5fr 1fr 10fr;
+    grid-gap: 5px;
     margin:0;
-    padding:0;
+ 
 
 
 
@@ -23,27 +21,50 @@
         grid-area:selections;
         display:grid;
         grid-template-areas: 
-        "surgeon calendar procedure";
-        grid-template-columns: 1fr 1fr 1fr;
+        "surgeon procedure dates facilities"
+        "findroom templates daysofweek  units";
+        grid-template-columns: 0.2fr 0.3fr 0.6fr 0.8fr;
         grid-gap: 10px;
-        min-height:11rem;
+        min-height:12rem;
 
 
         .open-table-sections-surgeon {
-            background-color: blue;
             grid-area:surgeon;
+            max-width:12rem;
+            max-height:5.5rem;
+        }
+        .open-table-sections-findroom {
+            grid-area:findroom;
+            max-width:12rem;
+            max-height:5.5rem;
         }
 
-        .open-table-sections-calendar {
-            grid-area:calendar;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
+        .open-table-sections-dates {
+            grid-area:dates;
+            max-width:37rem;
         }
+        .open-table-sections-daysofweek {
+            grid-area:daysofweek;
+            max-width: 37rem;
+        }
+
+        .open-table-sections-facilities {
+            grid-area:facilities;
+            max-width:37rem;
+        }
+
+        .open-table-sections-units {
+            grid-area:units;
+            max-width:37rem;
+        }
+
         .open-table-sections-procedure {
-            background-color: blue;
             grid-area:procedure;
+            max-width:20rem;
+        }
+        .open-table-sections-templates {
+            grid-area:templates;
+            max-width:20rem;
         }
     }
     .open-table-main-body {

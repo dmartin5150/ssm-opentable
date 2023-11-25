@@ -2,9 +2,12 @@
     display:flex;
     /* padding:1rem; */
     border: 1px solid black;
-    min-width: 35rem;
+    min-width: 25rem;
+    max-width: 35rem;
     position:relative;
     border-radius:2px;
+    min-height:2.5rem;
+
     
     .range-selectors-title {
         font-size:medium;
