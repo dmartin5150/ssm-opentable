@@ -6,7 +6,7 @@ const FindRoom: React.FC = () => {
     return (
 
             <div className='find-room'>
-                <button className='find-room-button'>Find Room</button>
+                <button className='find-room-button'>Find Open Times</button>
             </div>
 
     )

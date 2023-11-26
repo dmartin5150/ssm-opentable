@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MainNav from '../components/MainNav/MainNav';
 import RangeSelectors from '../components/dateRange/RangeSelector';
 import CheckBoxCard from '../components/CheckBoxCard/CheckBoxCard';
@@ -10,6 +10,7 @@ import './OpenTableHome.css';
 import ProviderColumn from '../components/ProviderColumn/ProviderColumn';
 import { PROVIDERS } from '../data/sampledata/Providers';
 import { FOUNDTIMES } from '../data/sampledata/FoundTimes';
+import { Procedure } from '../data/datatypes/procedure';
 
 import { BLOCKS } from '../data/sampledata/Blocks';
 import { PROCEDURES } from '../data/sampledata/Procedures';
@@ -25,7 +26,7 @@ const DAYSOFWEEK:string[] = [
 ]
 
 const SURGEONS:string[] = [
-    'John Smith, MD',
+    'Leonard Elrod, MD',
     'Rob Parker, DO',
     'Jane Doe, MD',
     'Sue Austin, MD'
@@ -60,10 +61,21 @@ const TEMPLATES:string[] = [
 const OpenTableHome: React.FC = () => {
 
     const [selectedTimeID, setSelectedTimeID] = useState(-1);
+    const [curProcs, setCurProcs] = useState<Procedure[]>([])
 
     const handleChangeSelectedTime = (selectedTime:number) => {
         setSelectedTimeID(selectedTime);
     }
+
+    useEffect(()=> {
+        if (selectedTimeID === -1) {
+            setCurProcs([])
+        } else {
+            setCurProcs(PROCEDURES.filter((procedure)=> procedure.providerId === 1))
+        }
+    }, [selectedTimeID])
+
+
 
 
     const provider1 = PROCEDURES.filter((procedure)=> procedure.providerId === 1);
@@ -107,7 +119,7 @@ const OpenTableHome: React.FC = () => {
                             provider={PROVIDERS[0]} 
                             selectedId={selectedTimeID} 
                             block={BLOCKS[0]} 
-                            procedures={provider1} 
+                            procedures={curProcs} 
                             onSelectedTimeChanged={handleChangeSelectedTime} 
                             showHeaderButton={false}
                             showFoundTimeHeader={false}

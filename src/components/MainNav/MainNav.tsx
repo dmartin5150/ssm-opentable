@@ -15,7 +15,7 @@ const MainNav = () => {
                 </div>
             </div>
                 <div className='main-nav-featurename'>
-                    <h1>Find Open Times</h1>
+                    <h1>Open Time Generator</h1>
                 </div>
             </div>
     )
