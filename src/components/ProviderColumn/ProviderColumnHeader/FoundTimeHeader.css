@@ -1,5 +1,5 @@
-.no-block-header {
-    background-color: #00a992;;
+.foundtime-header {
+    background-color: #7b68ee;;
 
     color:white;
     min-width:280px;
@@ -11,25 +11,28 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:1px 0 5px 0;
+    padding: 1px 0 5px 0;
 
     
-    .no-block-header-data {
+    .foundtime-header-data {
         display:flex;
         flex-direction: column;
         justify-content: center;
-        padding:0px 8px;
+        padding:0px 8px 0px 8px;
 
-        .no-block-header-name {
+        .foundtime-header-title {
             margin:0;
             padding:5px 0;
         }
-        .no-block-header-date {
+
+        .foundtime-header-name {
             margin:0;
-            /* padding:2px 0; */
-            font-weight:lighter;
+            padding:0
         }
 
+        .foundtime-header-range{
+            margin:0;
+        }
     }
 
 }

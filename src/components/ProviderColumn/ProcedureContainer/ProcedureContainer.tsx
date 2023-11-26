@@ -7,17 +7,20 @@ import { PROCEDURE_TYPES } from '../../../data/datatypes/procedure';
 import './ProcedureContainer.css';
 import FoundTimeCard from '../../FoundTimeCard/FoundTimeCard';
 
+
 interface ProcedureContainerProps {
     procedure:Procedure;
     block:Block;
     selectedId:number;
+    showDelete:boolean;
     onSelectedTimeChanged: (id:number) =>void;
 
 }
 
-const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,selectedId, onSelectedTimeChanged}) => {
+const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,selectedId,showDelete, onSelectedTimeChanged}) => {
 
-    const [showBlockOutline, setShowBlockOutline] = useState('')
+    const [showBlockOutline, setShowBlockOutline] = useState('');
+
 
     useEffect(()=> {
         if (procedure.inBlock) {
@@ -29,16 +32,30 @@ const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,
         } else {
             setShowBlockOutline('')
         }
-    })
+    },[procedure])
+
+
+
 
     return (
         <div className={`procedure-container ${showBlockOutline} `}>
         {
-            procedure.procedureType === PROCEDURE_TYPES.PROCEDURE ? 
-            <ProcedureCard procedure={procedure} key={procedure.procedureId} /> :
-            // <FoundTimeCard procedure={procedure} key={procedure.procedureId} selectedId={selectedId} onSelectedTimeChanged={onSelectedTimeChanged} /> :
+            procedure.procedureType === PROCEDURE_TYPES.PROCEDURE  &&  
+            <ProcedureCard procedure={procedure} key={procedure.procedureId} /> 
+        } 
+        {
+            procedure.procedureType === PROCEDURE_TYPES.OPENTIME  &&  
             <OpenTimeCard procedure={procedure} key={procedure.procedureId} /> 
-        }
+        } 
+        {
+            procedure.procedureType === PROCEDURE_TYPES.FOUNDTIME  &&  
+            <FoundTimeCard 
+                procedure={procedure} 
+                key={procedure.procedureId} 
+                selectedId={selectedId}
+                showDelete={showDelete}
+                onSelectedTimeChanged={onSelectedTimeChanged} /> 
+        } 
         </div>
     )
 }

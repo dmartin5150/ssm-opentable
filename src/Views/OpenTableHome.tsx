@@ -9,6 +9,7 @@ import FindRoom from '../components/FindRoom/FindRoom';
 import './OpenTableHome.css';
 import ProviderColumn from '../components/ProviderColumn/ProviderColumn';
 import { PROVIDERS } from '../data/sampledata/Providers';
+import { FOUNDTIMES } from '../data/sampledata/FoundTimes';
 
 import { BLOCKS } from '../data/sampledata/Blocks';
 import { PROCEDURES } from '../data/sampledata/Procedures';
@@ -102,8 +103,23 @@ const OpenTableHome: React.FC = () => {
             <div className='open-table-main-body-container'>
                 <div className='open-table-main-body'>
                     <div className='open-table-times'>
-                        <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
-                        <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+                        <ProviderColumn 
+                            provider={PROVIDERS[0]} 
+                            selectedId={selectedTimeID} 
+                            block={BLOCKS[0]} 
+                            procedures={provider1} 
+                            onSelectedTimeChanged={handleChangeSelectedTime} 
+                            showHeaderButton={false}
+                            showFoundTimeHeader={false}
+                            showDelete={false}/>
+                        <ProviderColumn 
+                            provider={PROVIDERS[0]} 
+                            selectedId={selectedTimeID} 
+                            block={BLOCKS[0]} procedures={FOUNDTIMES} 
+                            onSelectedTimeChanged={handleChangeSelectedTime} 
+                            showHeaderButton={false}
+                            showFoundTimeHeader={true}
+                            showDelete={true}/>
                     </div>
                     <div className='open-table-form'>
                         <EmptySchedulingForm procedureId={selectedTimeID}/>

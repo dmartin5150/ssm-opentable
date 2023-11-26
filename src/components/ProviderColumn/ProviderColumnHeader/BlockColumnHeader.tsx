@@ -6,23 +6,26 @@ import './BlockColumnHeader.css';
 
 
 interface BlockColumnHeaderProps  {
-    provider:Provider,
-    block: Block
+    provider:Provider;
+    showHeaderButton:boolean;
+    block: Block;
 }
 
 
 
-const BlockColumnHeader: React.FC<BlockColumnHeaderProps> = ({provider, block}) => {
+const BlockColumnHeader: React.FC<BlockColumnHeaderProps> = ({provider, block, showHeaderButton}) => {
     return(
         <div className='provider-column-header'>
             <div className='provider-column-header-data'>
                 <p className='provider-column-header-name'><b>{provider.providerName}</b></p>
+                <p className='provider-column-header-name'><b>Date Selected:  11/25/23</b></p>
                 <p className='provider-column-header-time'>Block Time: {block.timeString}</p>
                 <p className='provider-column-header-available'><b>{block.availableTime}</b> approx. available</p>
             </div>
-            <div className='provider-column-header-button'>
+            {showHeaderButton && <div className='provider-column-header-button'>
                 <AddButton />
             </div>
+}
         </div>
     );
 }

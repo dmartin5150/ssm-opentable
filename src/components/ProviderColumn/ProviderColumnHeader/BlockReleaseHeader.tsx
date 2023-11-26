@@ -6,17 +6,19 @@ import './BlockReleaseHeader.css';
 
 
 interface BlockReleaseHeaderProps  {
-    provider:Provider,
-    block: Block
+    provider:Provider;
+    showHeaderButton:boolean;
+    block: Block;
 }
 
 
 
-const BlockReleaseHeader: React.FC<BlockReleaseHeaderProps> = ({provider, block}) => {
+const BlockReleaseHeader: React.FC<BlockReleaseHeaderProps> = ({provider, block,showHeaderButton}) => {
     return(
         <div className='block-release-header'>
             <div className='block-release-header-data'>
                 <p className='block-release-header-name'><b>{provider.providerName}</b></p>
+                <p className='block-release-header-name'><b>Date Selected:  11/25/23</b></p>
                 <p className='block-release-header-time'>Block Time: {block.timeString}</p>
                 <div className='block-release-header-released'>
                     <div className='block-release-header-image-container'>
@@ -25,9 +27,10 @@ const BlockReleaseHeader: React.FC<BlockReleaseHeaderProps> = ({provider, block}
                     <b className='block-release-message'>Block Released</b>
                 </div>
             </div>
-            <div className='block-release-header-button'>
+            {showHeaderButton && <div className='block-release-header-button'>
                 <AddButton />
             </div>
+            }
         </div>
     );
 }

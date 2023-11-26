@@ -7,12 +7,13 @@ import { SCHEDULING_STATUS } from '../../data/datatypes/schedulingStatus';
 interface FoundTimeCardProps {
     procedure:Procedure;
     selectedId:number;
+    showDelete:boolean;
     onSelectedTimeChanged:(id:number)=>void;
 }
 
 
 
-const FoundTimeCard: React.FC<FoundTimeCardProps> = ({selectedId, procedure,onSelectedTimeChanged}) => {
+const FoundTimeCard: React.FC<FoundTimeCardProps> = ({selectedId, procedure,onSelectedTimeChanged, showDelete}) => {
 
     const [background, setBackGround] = useState('')
     const [checked, setChecked] = React.useState(false);
@@ -69,11 +70,11 @@ const FoundTimeCard: React.FC<FoundTimeCardProps> = ({selectedId, procedure,onSe
             <div className='foundtime-card-data'>
                 <div className='foundtime-card-data-heading'>
                     {firstLine()}
-                    <div className='foundtime-card-data-heading-rightside'>
+                    {showDelete && <div className='foundtime-card-data-heading-rightside'>
                         <div className='foundtime-card-data-container'>
                             <img className='foundtime-card-data-image' src='delete.png' alt='delete' />
                         </div>
-                    </div>
+                    </div>}
                 </div>
                 <p className='foundtime-card-dateString'>{procedure.dateString}</p> 
                 <p className='foundtime-card-timeString'>{procedure.timeString}</p> 

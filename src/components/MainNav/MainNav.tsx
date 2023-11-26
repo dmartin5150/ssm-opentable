@@ -15,7 +15,7 @@ const MainNav = () => {
                 </div>
             </div>
                 <div className='main-nav-featurename'>
-                    <h1>Find A Room</h1>
+                    <h1>Find Open Times</h1>
                 </div>
             </div>
     )

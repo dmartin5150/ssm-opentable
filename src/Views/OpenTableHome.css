@@ -71,7 +71,9 @@
             .open-table-times {
                 height:100%;
                 margin-left:5%;
-                display:flex;
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;
             }
 
             .open-table-form {

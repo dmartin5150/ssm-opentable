@@ -110,8 +110,8 @@
     border:2px solid #2c3a34
 }
 .foundtime-card.unscheduled{
-    background-color: rgb(255, 247, 230);
-    border: 2px dashed rgb(255, 127, 0);
+    background-color: #ccccff;
+    border: 2px dashed #7b68ee;
 }
 .foundtime-card.revision{
     background-color: #FDE6EE;

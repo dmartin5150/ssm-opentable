@@ -2,7 +2,8 @@ import { SCHEDULING_STATUS } from "./schedulingStatus";
 
 export enum PROCEDURE_TYPES {
     OPENTIME = 'open time',
-    PROCEDURE = 'procedure'
+    PROCEDURE = 'procedure',
+    FOUNDTIME = 'foundtime'
 }
 
 export type Procedure = {

@@ -1,7 +1,17 @@
-.emptyschedulingform {
-    display:flex;
-    justify-content: center;
-    /* align-items: center; */
-    border:2px solid black;
-    height:100%;
+.empty-scheduling-form {
+    display:grid;
+    grid-template-rows: 1fr 7.6fr;
+
+    .empty-scheduling-form-directions {
+        border:1px solid #7b68ee;;;
+        color:#7b68ee;;
+    }
+    .emptyschedulingform-message {
+        border:2px solid black;
+        height:100%;
+    }
+    .emptyschedulingform-message.showfullscreen {
+        height: 630px;
+    }
+    
 }
