@@ -70,6 +70,7 @@
 
             .open-table-times {
                 height:100%;
+                max-height:630px;
                 margin-left:5%;
                 display:grid;
                 grid-template-columns: 1fr 1fr;
