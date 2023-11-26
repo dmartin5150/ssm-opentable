@@ -71,11 +71,12 @@
             .open-table-times {
                 height:100%;
                 margin-left:5%;
+                display:flex;
             }
 
             .open-table-form {
                 margin-left:5px;
-                width:73%;
+                width:57%;
             }
         }
     }

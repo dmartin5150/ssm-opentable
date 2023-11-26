@@ -102,7 +102,8 @@ const OpenTableHome: React.FC = () => {
             <div className='open-table-main-body-container'>
                 <div className='open-table-main-body'>
                     <div className='open-table-times'>
-                    <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+                        <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
+                        <ProviderColumn provider={PROVIDERS[0]} selectedId={selectedTimeID} block={BLOCKS[0]} procedures={provider1} onSelectedTimeChanged={handleChangeSelectedTime}/>
                     </div>
                     <div className='open-table-form'>
                         <EmptySchedulingForm procedureId={selectedTimeID}/>

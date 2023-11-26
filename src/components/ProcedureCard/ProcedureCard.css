@@ -7,20 +7,21 @@
     font-family: Lato;
     font-weight:300;
     color:black;
-    display:flex;
-    justify-content: flex-start;
-    align-items: flex-start;
 
-    .procedure-card-checkbox-container {
-        padding:8px 4px;
-    }
     .procedure-card-data {
         display:flex;
         flex-direction: column;
         justify-content: center;
         padding:10px 8px 0px 8px;
         padding:8px;
-        width:100%;
+        /* background-color: #E9FBE7;
+        border:2px solid #126E36; */
+
+        /* background-color: rgb(255, 247, 230);
+        border: 2px dashed rgb(255, 127, 0); */
+
+        /* background-color: #FDE6EE;
+        border: 2px solid #B40F87; */
 
         .procedure-card-inBlock {
             margin:0;
@@ -40,7 +41,7 @@
                 .procedure-card-data-heading-rightside {
                     display:flex;
                     flex-direction: row;
-                    justify-content: flex-end;
+                    justify-content: space-between;
                     min-width:50px;
 
                     .procedure-card-data-container {
@@ -60,12 +61,6 @@
             margin:0;
             padding:0;
         }
-
-        .procedure-card-dateString {
-            margin:0;
-            padding:0;
-        }
-
         .procedure-card-timeString {
             margin:0;
             padding:0;

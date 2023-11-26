@@ -5,6 +5,7 @@ import ProcedureCard from '../../ProcedureCard/ProcedureCard';
 import OpenTimeCard from '../../OpenTimeCard/OpenTimeCard';
 import { PROCEDURE_TYPES } from '../../../data/datatypes/procedure';
 import './ProcedureContainer.css';
+import FoundTimeCard from '../../FoundTimeCard/FoundTimeCard';
 
 interface ProcedureContainerProps {
     procedure:Procedure;
@@ -34,7 +35,8 @@ const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,
         <div className={`procedure-container ${showBlockOutline} `}>
         {
             procedure.procedureType === PROCEDURE_TYPES.PROCEDURE ? 
-            <ProcedureCard procedure={procedure} key={procedure.procedureId} selectedId={selectedId} onSelectedTimeChanged={onSelectedTimeChanged} /> :
+            <ProcedureCard procedure={procedure} key={procedure.procedureId} /> :
+            // <FoundTimeCard procedure={procedure} key={procedure.procedureId} selectedId={selectedId} onSelectedTimeChanged={onSelectedTimeChanged} /> :
             <OpenTimeCard procedure={procedure} key={procedure.procedureId} /> 
         }
         </div>
