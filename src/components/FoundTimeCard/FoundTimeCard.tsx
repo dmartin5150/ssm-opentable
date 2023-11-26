@@ -4,6 +4,7 @@ import './FoundTimeCard.css';
 import { SCHEDULING_STATUS } from '../../data/datatypes/schedulingStatus';
 
 
+
 interface FoundTimeCardProps {
     procedure:Procedure;
     selectedId:number;
@@ -79,13 +80,30 @@ const FoundTimeCard: React.FC<FoundTimeCardProps> = ({selectedId, procedure,onSe
                 <p className='foundtime-card-dateString'>{procedure.dateString}</p> 
                 <p className='foundtime-card-timeString'>{procedure.timeString}</p> 
                 <p className='foundtime-card-procedureName'>{procedure.procedureName}</p> 
+                <p className='foundtime-card-procedureInfo'>Facility: {procedure.facility}</p> 
+                <p className='foundtime-card-procedureInfo'>Unit: {procedure.unit}</p> 
+                <p className='foundtime-card-procedureInfo'>Room: {procedure.room}</p> 
+                <p className='foundtime-card-procedureInfo'>Estimated Procedure Time: {procedure.duration}</p> 
             </div>
         </div>
     )
 }
 export default FoundTimeCard;
 
-
+// procedureId:number;
+// procedureType:PROCEDURE_TYPES,
+// providerId:number, 
+// providerName: string;
+// dateString:string;
+// timeString:string;
+// patientName:string;
+// procedureName:string;
+// facility:string;
+// unit: string;
+// room:string;
+// inBlock:boolean;
+// scheduleStatus:SCHEDULING_STATUS;
+// duration:string;
 
 
 

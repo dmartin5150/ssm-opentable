@@ -1,12 +1,9 @@
 import { SCHEDULING_STATUS } from "./schedulingStatus";
+import { PROCEDURE_TYPES } from "./procedure";
 
-export enum PROCEDURE_TYPES {
-    OPENTIME = 'open time',
-    PROCEDURE = 'procedure',
-    FOUNDTIME = 'foundtime'
-}
 
-export type Procedure = {
+
+export type FoundTime = {
     procedureId:number;
     procedureType:PROCEDURE_TYPES,
     providerId:number, 
@@ -15,11 +12,10 @@ export type Procedure = {
     timeString:string;
     patientName:string;
     procedureName:string;
-    FIN?:string;
-    inBlock:boolean;
-    scheduleStatus:SCHEDULING_STATUS;
-    duration?:string;
     facility:string;
     unit: string;
     room:string;
+    inBlock:boolean;
+    scheduleStatus:SCHEDULING_STATUS;
+    duration:string;
 }
