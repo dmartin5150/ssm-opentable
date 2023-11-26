@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import "./DropDownBox.css";
 export interface DropDownBoxProps {
     options: string[]
 }
@@ -13,7 +13,7 @@ const DropdownBox: React.FC<DropDownBoxProps> = ({options}) =>
     }
     return(
         <div className='dropdownbox'>
-            <select value={selectedOption} onChange={onChange}>
+            <select className='dropdownbox-select' value={selectedOption} onChange={onChange}>
                 {options.map((option, idx) => {
                     return <option className='dropdownbox-option' value={option} key={idx}>{option}</option>
                 })}

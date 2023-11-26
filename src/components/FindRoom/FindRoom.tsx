@@ -4,14 +4,11 @@ import './FindRoom.css';
 
 const FindRoom: React.FC = () => {
     return (
-        // <Card>
+
             <div className='find-room'>
-                {/* <h2 className='find-room-title'>Find Room</h2> */}
-                <div className='find-room-button-container'>
-                    <button className='find-room-button'>Find Room</button>
-                </div>
+                <button className='find-room-button'>Find Room</button>
             </div>
-        // </Card>
+
     )
 }
 export default FindRoom;
