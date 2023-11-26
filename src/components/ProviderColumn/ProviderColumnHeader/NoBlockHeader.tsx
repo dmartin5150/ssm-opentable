@@ -18,7 +18,7 @@ const NoBlockHeader: React.FC<NoBlockHeaderProps> = ({provider, block,showHeader
         <div className='no-block-header'>
             <div className='no-block-header-data'>
                 <p className='no-block-header-name'><b>{provider.providerName}</b></p>
-                <p className='no-block-header-date'>Date Selected:  11/25/23</p>
+                <p className='no-block-header-date'>Date Selected: No Date Selected</p>
             </div>
             {showHeaderButton && <div className='no-block-header-button'>
                 <AddButton />

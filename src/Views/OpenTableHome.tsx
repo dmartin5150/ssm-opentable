@@ -11,6 +11,7 @@ import ProviderColumn from '../components/ProviderColumn/ProviderColumn';
 import { PROVIDERS } from '../data/sampledata/Providers';
 import { FOUNDTIMES } from '../data/sampledata/FoundTimes';
 import { Procedure } from '../data/datatypes/procedure';
+import { Provider } from '../data/datatypes/provider';
 
 import { BLOCKS } from '../data/sampledata/Blocks';
 import { PROCEDURES } from '../data/sampledata/Procedures';
@@ -62,6 +63,7 @@ const OpenTableHome: React.FC = () => {
 
     const [selectedTimeID, setSelectedTimeID] = useState(-1);
     const [curProcs, setCurProcs] = useState<Procedure[]>([])
+    const [providerIndex, setProviderIndex] = useState(0);
 
     const handleChangeSelectedTime = (selectedTime:number) => {
         setSelectedTimeID(selectedTime);
@@ -75,10 +77,16 @@ const OpenTableHome: React.FC = () => {
         }
     }, [selectedTimeID])
 
+    useEffect(()=> {
+        if (selectedTimeID === -1) {
+            setProviderIndex(1);
+        } else {
+            setProviderIndex(0);
+        }
+    }, [selectedTimeID])
 
 
 
-    const provider1 = PROCEDURES.filter((procedure)=> procedure.providerId === 1);
     return(
         <div className='open-table'>
             <div className='open-table-main-nav'>
@@ -116,7 +124,7 @@ const OpenTableHome: React.FC = () => {
                 <div className='open-table-main-body'>
                     <div className='open-table-times'>
                         <ProviderColumn 
-                            provider={PROVIDERS[0]} 
+                            provider={PROVIDERS[providerIndex]} 
                             selectedId={selectedTimeID} 
                             block={BLOCKS[0]} 
                             procedures={curProcs} 
@@ -124,7 +132,9 @@ const OpenTableHome: React.FC = () => {
                             showHeaderButton={false}
                             showFoundTimeHeader={false}
                             showDelete={false}/>
-                        <ProviderColumn 
+                    </div>
+                    <div className='open-table-times'>
+                        <ProviderColumn         
                             provider={PROVIDERS[0]} 
                             selectedId={selectedTimeID} 
                             block={BLOCKS[0]} procedures={FOUNDTIMES} 

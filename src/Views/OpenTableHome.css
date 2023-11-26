@@ -61,26 +61,18 @@
     }
     .open-table-main-body-container {
 
-
-
         .open-table-main-body {
-            display:flex;
-            justify-content: flex-start;
-            margin-top:0.5rem;
-
-            .open-table-times {
-                height:100%;
-                max-height:630px;
-                margin-left:5%;
-                display:grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 10px;
-            }
+            display:grid;
+            grid-template-columns: 1fr 1fr 3.7fr;
+            column-gap: 10px;
+            max-height:630px;
+            margin: 0.5rem 5.7rem;
+            justify-items:start;
 
             .open-table-form {
-                margin-left:5px;
-                width:57%;
-            }
+                justify-self: stretch;
+                border:2px solid black;
+            } 
         }
     }
     
