@@ -83,7 +83,7 @@ const FoundTimeCard: React.FC<FoundTimeCardProps> = ({selectedId, procedure,onSe
                 <p className='foundtime-card-procedureInfo'>Facility: {procedure.facility}</p> 
                 <p className='foundtime-card-procedureInfo'>Unit: {procedure.unit}</p> 
                 <p className='foundtime-card-procedureInfo'>Room: {procedure.room}</p> 
-                <p className='foundtime-card-procedureInfo'>Estimated Procedure Time: {procedure.duration}</p> 
+                <p className='foundtime-card-procedureInfo'>Procedure Duration: {procedure.duration}</p> 
             </div>
         </div>
     )
