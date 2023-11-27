@@ -1,0 +1,31 @@
+
+.duration {
+    display:flex;
+    border: 1px solid black;
+    position:relative;
+    border-radius:2px;
+    justify-content: center;
+    align-items: center;
+    max-width:20rem;
+    min-height:2.5rem;
+    
+    .duration-label {
+        font-size:medium;
+        position:absolute;
+        top: -0.8rem;
+        left: 1rem;
+        padding:0;
+        margin:0;
+        background-color: white;
+    }
+
+    .duration-input-contatiner {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-width:11rem;
+        .duration-input {
+            max-width:7rem;
+        }
+    }
+}

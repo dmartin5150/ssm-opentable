@@ -9,7 +9,7 @@
             display:grid;
             grid-template-areas: 
             "surgeon procedure dates facilities"
-            "findroom templates daysofweek  units";
+            "findroom duration daysofweek  units";
             grid-template-columns: auto;
             grid-template-rows:5rem 5rem;
             grid-gap: 0 10px;
@@ -56,6 +56,10 @@
             .open-table-sections-templates {
                 grid-area:templates;
                 max-width:20rem;
+            }
+            .open-table-sections-duration {
+                grid-area:duration;
+                max-width:15rem; 
             }
         }
     }

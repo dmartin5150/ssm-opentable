@@ -12,6 +12,7 @@ import { PROVIDERS } from '../data/sampledata/Providers';
 import { FOUNDTIMES } from '../data/sampledata/FoundTimes';
 import { Procedure } from '../data/datatypes/procedure';
 import { Provider } from '../data/datatypes/provider';
+import Duration from '../components/Duration/Duration';
 
 import { BLOCKS } from '../data/sampledata/Blocks';
 import { PROCEDURES } from '../data/sampledata/Procedures';
@@ -115,8 +116,8 @@ const OpenTableHome: React.FC = () => {
                     <div className='open-table-sections-procedure'>
                         <ProcedureDropDown procedures={PROCEDURESNAMES} />
                     </div>
-                    <div className='open-table-sections-templates'>
-                        <TemplateDropDown templates={TEMPLATES} />
+                    <div className='open-table-sections-duration'>
+                       <Duration />
                     </div>
                 </div>
             </div>
