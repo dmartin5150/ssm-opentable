@@ -94,6 +94,7 @@ const OpenTableHome: React.FC = () => {
             setCurTimes(FOUNDTIMES);
         }else {
             setCurTimes([]);
+            setCurProcs([]);
         }
     }
 
