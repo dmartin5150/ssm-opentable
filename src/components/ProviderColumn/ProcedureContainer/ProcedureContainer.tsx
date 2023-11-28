@@ -13,11 +13,12 @@ interface ProcedureContainerProps {
     block:Block;
     selectedId:number;
     showDelete:boolean;
+    showIcons:boolean;
     onSelectedTimeChanged: (id:number) =>void;
 
 }
 
-const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,selectedId,showDelete, onSelectedTimeChanged}) => {
+const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,selectedId,showDelete,showIcons, onSelectedTimeChanged}) => {
 
     const [showBlockOutline, setShowBlockOutline] = useState('');
 
@@ -41,7 +42,7 @@ const ProcedureContainer: React.FC<ProcedureContainerProps> = ({procedure,block,
         <div className={`procedure-container ${showBlockOutline} `}>
         {
             procedure.procedureType === PROCEDURE_TYPES.PROCEDURE  &&  
-            <ProcedureCard procedure={procedure} key={procedure.procedureId} /> 
+            <ProcedureCard procedure={procedure} showIcons={showIcons} key={procedure.procedureId} /> 
         } 
         {
             procedure.procedureType === PROCEDURE_TYPES.OPENTIME  &&  

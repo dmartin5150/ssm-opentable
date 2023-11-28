@@ -20,6 +20,7 @@ interface ProviderColumnProps {
     selectedId:number;
     showHeaderButton:boolean;
     showFoundTimeHeader:boolean;
+    showIcons:boolean;
     showDelete:boolean;
     onSelectedTimeChanged:(id:number) => void;
 }
@@ -32,7 +33,7 @@ enum HeaderTypes {
 }
 
 
-const ProviderColumn: React.FC<ProviderColumnProps> = ({provider,block, showHeaderButton,showDelete,showFoundTimeHeader, selectedId, procedures, onSelectedTimeChanged}) => {
+const ProviderColumn: React.FC<ProviderColumnProps> = ({provider,block, showHeaderButton,showDelete,showIcons,showFoundTimeHeader, selectedId, procedures, onSelectedTimeChanged}) => {
 
     const [headerType, setHeaderType] = useState<HeaderTypes>(HeaderTypes.NONE)
 
@@ -72,6 +73,7 @@ const ProviderColumn: React.FC<ProviderColumnProps> = ({provider,block, showHead
                         procedure={procedure} block={block} 
                         selectedId={selectedId}
                         showDelete={showDelete}
+                        showIcons={showIcons}
                         onSelectedTimeChanged={onSelectedTimeChanged} />
             })}  
         </div>

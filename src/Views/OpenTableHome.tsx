@@ -8,6 +8,7 @@ import TemplateDropDown from '../components/TemplateDropDown/TemplateDropDown';
 import FindRoom from '../components/FindRoom/FindRoom';
 import './OpenTableHome.css';
 import ProviderColumn from '../components/ProviderColumn/ProviderColumn';
+import { FoundTime } from '../data/datatypes/foundtimes';
 import { PROVIDERS } from '../data/sampledata/Providers';
 import { FOUNDTIMES } from '../data/sampledata/FoundTimes';
 import { Procedure } from '../data/datatypes/procedure';
@@ -64,6 +65,7 @@ const OpenTableHome: React.FC = () => {
 
     const [selectedTimeID, setSelectedTimeID] = useState(-1);
     const [curProcs, setCurProcs] = useState<Procedure[]>([])
+    const [curTimes, setCurTimes] = useState<FoundTime[]>([])
     const [providerIndex, setProviderIndex] = useState(0);
 
     const handleChangeSelectedTime = (selectedTime:number) => {
@@ -87,6 +89,14 @@ const OpenTableHome: React.FC = () => {
     }, [selectedTimeID])
 
 
+    const handleUpdateFindRoom = () => {
+        if (curTimes.length === 0) {
+            setCurTimes(FOUNDTIMES);
+        }else {
+            setCurTimes([]);
+        }
+    }
+
 
     return(
         <div className='open-table'>
@@ -99,7 +109,7 @@ const OpenTableHome: React.FC = () => {
                         <SurgeonDropDown surgeons={SURGEONS} />
                     </div>
                     <div className='open-table-sections-findroom'>
-                        <FindRoom  />
+                        <FindRoom onClick={handleUpdateFindRoom} />
                     </div>
                     <div className='open-table-sections-facilities'>
                         <CheckBoxCard title='Facilities' items={FACILITIES} />
@@ -132,16 +142,18 @@ const OpenTableHome: React.FC = () => {
                             onSelectedTimeChanged={handleChangeSelectedTime} 
                             showHeaderButton={false}
                             showFoundTimeHeader={false}
+                            showIcons={false}
                             showDelete={false}/>
                     </div>
                     <div className='open-table-times'>
                         <ProviderColumn         
                             provider={PROVIDERS[0]} 
                             selectedId={selectedTimeID} 
-                            block={BLOCKS[0]} procedures={FOUNDTIMES} 
+                            block={BLOCKS[0]} procedures={curTimes} 
                             onSelectedTimeChanged={handleChangeSelectedTime} 
                             showHeaderButton={false}
                             showFoundTimeHeader={true}
+                            showIcons={false}
                             showDelete={true}/>
                     </div>
                     <div className='open-table-form'>

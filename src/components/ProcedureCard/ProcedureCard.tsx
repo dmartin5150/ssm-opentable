@@ -7,11 +7,12 @@ import { SCHEDULING_STATUS } from '../../data/datatypes/schedulingStatus';
 
 interface ProcedureCardProps {
     procedure:Procedure;
+    showIcons:boolean;
 }
 
 
 
-const ProcedureCard: React.FC<ProcedureCardProps> = ({procedure}) => {
+const ProcedureCard: React.FC<ProcedureCardProps> = ({procedure, showIcons}) => {
 
     const [background, setBackGround] = useState('')
 
@@ -48,14 +49,14 @@ const ProcedureCard: React.FC<ProcedureCardProps> = ({procedure}) => {
             <div className='procedure-card-data'>
                 <div className='procedure-card-data-heading'>
                     {firstLine()}
-                    <div className='procedure-card-data-heading-rightside'>
+                    { showIcons && <div className='procedure-card-data-heading-rightside'>
                         <div className='procedure-card-data-container'>
                             <img className='procedure-card-data-image' src='edit.png' alt='edit' />
                         </div>
                         <div className='procedure-card-data-container'>
                             <img className='procedure-card-data-image' src='delete.png' alt='delete' />
                         </div>
-                    </div>
+                    </div>}
                 </div>
                 <p className='procedure-card-timeString'>{procedure.timeString}</p> 
                 <p className='procedure-card-patientName'>{procedure.patientName}</p> 

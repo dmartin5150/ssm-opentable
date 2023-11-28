@@ -2,11 +2,15 @@ import React from 'react';
 import Card from '../card/card';
 import './FindRoom.css';
 
-const FindRoom: React.FC = () => {
+interface FindRoomProps {
+    onClick: ()=>void;
+}
+
+const FindRoom: React.FC<FindRoomProps> = ({onClick}) => {
     return (
 
             <div className='find-room'>
-                <button className='find-room-button'>Find Open Times</button>
+                <button className='find-room-button' onClick={onClick}>Find Open Times</button>
             </div>
 
     )
